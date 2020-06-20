@@ -1,1 +1,1 @@
-# JAMstack-3-building-with-an-ssg
+# JAMstack-5-generating-localized-content
