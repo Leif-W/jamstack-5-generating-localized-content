@@ -4,8 +4,9 @@
   "description": "",
   "main": "vibe.js",
   "scripts": {
+    "start": "eleventy --serve",
     "build": "node util/checkEnv.js && eleventy",
-    "start": "eleventy --serve"
+    "postbuild": "mv dist/redirects/index.html dist/_redirects && rm -rf dist/redirects"
   },
   "keywords": [],
   "author": "",
