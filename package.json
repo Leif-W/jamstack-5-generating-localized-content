@@ -1,12 +1,22 @@
 {
   "name": "jamstack-5-generating-local-content",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.5",
+  "description": "JAMstack - Example 5 - Generating Local Content",
   "main": "vibe.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "node util/checkEnv.js && eleventy",
-    "postbuild": "mv dist/redirects/index.html dist/_redirects && rm -rf dist/redirects"
+    "clean": "node util/clean.js",
+    "tidy": "node util/tidy.js",
+    "check-env": "node util/check-env.js",
+    "prestart": "npm run clean",
+    "start": "npm run check-env && eleventy --serve",
+    "poststart": "npm run tidy",
+    "prebuild": "npm run clean",
+    "build": "npm run check-env && eleventy",
+    "postbuild": "npm run tidy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leif-W/jamstack-5-generating-localized-content.git"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +24,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.0.1"
   }
 }
