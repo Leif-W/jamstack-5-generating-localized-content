@@ -12,7 +12,8 @@
     "poststart": "npm run tidy",
     "prebuild": "npm run clean",
     "build": "npm run check-env && eleventy",
-    "postbuild": "npm run tidy"
+    "postbuild": "npm run tidy",
+    "test": "echo OK"
   },
   "repository": {
     "type": "git",
