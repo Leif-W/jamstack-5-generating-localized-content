@@ -24,7 +24,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "dotenv": "^16.0.3",
     "fs-extra": "^10.1.0"
   }
